@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="240dp"
         android:ems="10"
         android:hint="Enter Username"
         android:inputType="text"
@@ -33,10 +33,11 @@
 
     <Button
         android:id="@+id/button"
-        android:onClick="MyClickHandler"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/my_btn_width"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:onClick="MyClickHandler"
         android:text="Login"
         android:textColor="@android:color/black"
         app:layout_constraintStart_toStartOf="@+id/editTextNumberPassword"
@@ -44,9 +45,10 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/my_btn_width"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="24dp"
         android:text="Undo"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/editTextNumberPassword"
