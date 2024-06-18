@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="enter_username_hint">మీ పేరు నమోదు చేయండి</string>
+    <string name="hint_enter_pin">మీ పిన్‌ని నమోదు చేయండి</string>
+</resources>

@@ -1,5 +1,7 @@
 package com.example.firstapplication.kotkinexs
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -23,5 +25,8 @@ class MainActivity : AppCompatActivity() {
 
     fun MyClickHandler(view: View) {
         Log.i("MainActivity","Button Clicked")
+        // var dialIntent:Intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:9898645202"))
+        var webIntent:Intent = Intent(Intent.ACTION_VIEW,Uri.parse("http://www.google.com"))
+        startActivity(webIntent)
     }
 }
