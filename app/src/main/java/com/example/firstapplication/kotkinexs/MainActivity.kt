@@ -3,6 +3,7 @@ package com.example.firstapplication.kotkinexs
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.provider.AlarmClock
 import android.util.Log
 import android.view.View
 import androidx.activity.enableEdgeToEdge
@@ -26,7 +27,18 @@ class MainActivity : AppCompatActivity() {
     fun MyClickHandler(view: View) {
         Log.i("MainActivity","Button Clicked")
         // var dialIntent:Intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:9898645202"))
-        var webIntent:Intent = Intent(Intent.ACTION_VIEW,Uri.parse("http://www.google.com"))
-        startActivity(webIntent)
+//        var webIntent:Intent = Intent(Intent.ACTION_VIEW,Uri.parse("http://www.google.com"))
+//        startActivity(webIntent)
+        createAlarm("Vit",19,30)
+    }
+    fun createAlarm(message: String, hour: Int, minutes: Int) {
+        val intent = Intent(AlarmClock.ACTION_SET_ALARM).apply {
+            putExtra(AlarmClock.EXTRA_MESSAGE, message)
+            putExtra(AlarmClock.EXTRA_HOUR, hour)
+            putExtra(AlarmClock.EXTRA_MINUTES, minutes)
+        }
+       // if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+       // }
     }
 }
