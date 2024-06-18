@@ -1,6 +1,7 @@
 package com.example.firstapplication.kotkinexs
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -20,5 +21,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun MyClickHandler(view: View) {}
+    fun MyClickHandler(view: View) {
+        Log.i("MainActivity","Button Clicked")
+    }
 }
