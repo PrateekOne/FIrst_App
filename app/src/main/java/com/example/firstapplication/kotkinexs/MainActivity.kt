@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
 //        startActivity(webIntent)
         //createAlarm("Vit",19,30)
         var hIntent = Intent(this, HomeActivity::class.java)
+        hIntent.putExtra("nkey","prateek-android")
         startActivity(hIntent)
     }
 
