@@ -23,4 +23,8 @@ class HomeActivity : AppCompatActivity() {
         val homeTextView:TextView = findViewById(R.id.tvHome)
         homeTextView.setText(data)
     }
+
+    override fun onStart() {
+        super.onStart()
+    }
 }
