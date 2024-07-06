@@ -61,13 +61,28 @@ class MainActivity : AppCompatActivity() {
         // var dialIntent:Intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:9898645202"))
 //        var webIntent:Intent = Intent(Intent.ACTION_VIEW,Uri.parse("http://www.google.com"))
 //        startActivity(webIntent)
+        add(10,20)
         //createAlarm("Vit",19,30)
         var hIntent = Intent(this, HomeActivity::class.java)
         hIntent.putExtra("nkey","prateek-android")
         throw NullPointerException("Homeactivity Crash Demo")
         startActivity(hIntent)
     }
-
+    private fun add(i: Int, i1: Int): Int {
+        var c = 5 *20;
+        var d = c+i;
+        mul(5,4)
+        return i + i1
+    }
+    private fun mul(i: Int, i1: Int) {
+        div(9,3)
+    }
+    private fun div(i: Int, i1: Int) {
+        subtract(10,5)
+    }
+    private fun subtract(i: Int, i1: Int) {
+        i1-i
+    }
     fun createAlarm(message: String, hour: Int, minutes: Int) {
         val intent = Intent(AlarmClock.ACTION_SET_ALARM).apply {
             putExtra(AlarmClock.EXTRA_MESSAGE, message)
