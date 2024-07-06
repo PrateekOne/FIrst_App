@@ -14,6 +14,7 @@ import com.example.firstapplication.HomeActivity
 import com.example.firstapplication.R
 
 class MainActivity : AppCompatActivity() {
+    var TAG = "MainActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -23,8 +24,38 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        Log.i(TAG, "activity created")
     }
 
+    // chick has hatched --- activity is visible for clicks
+    override fun onStart() {
+        super.onStart()
+        Log.i(TAG, "activity started")
+    }
+
+    // chick has woken up -- come back to the foreground
+    override fun onResume() {
+        super.onResume()
+        Log.i(TAG, "activity resumed")
+    }
+
+    // chick has slept -- is partially visible -- background
+    override fun onPause() {
+        super.onPause()
+        Log.i(TAG, "activity paused")
+    }
+
+    // activity hibernated
+    override fun onStop() {
+        super.onStop()
+        Log.i(TAG, "activity stopped")
+    }
+
+    // all the resources are purged
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i(TAG, "activity destroyed")
+    }
     fun MyClickHandler(view: View) {
         Log.i("MainActivity","Button Clicked")
         // var dialIntent:Intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:9898645202"))
