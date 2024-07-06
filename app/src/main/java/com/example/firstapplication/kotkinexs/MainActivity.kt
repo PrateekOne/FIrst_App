@@ -10,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.firstapplication.HomeActivity
 import com.example.firstapplication.R
 
 class MainActivity : AppCompatActivity() {
@@ -29,8 +30,11 @@ class MainActivity : AppCompatActivity() {
         // var dialIntent:Intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:9898645202"))
 //        var webIntent:Intent = Intent(Intent.ACTION_VIEW,Uri.parse("http://www.google.com"))
 //        startActivity(webIntent)
-        createAlarm("Vit",19,30)
+        //createAlarm("Vit",19,30)
+        var hIntent = Intent(this, HomeActivity::class.java)
+        startActivity(hIntent)
     }
+
     fun createAlarm(message: String, hour: Int, minutes: Int) {
         val intent = Intent(AlarmClock.ACTION_SET_ALARM).apply {
             putExtra(AlarmClock.EXTRA_MESSAGE, message)
